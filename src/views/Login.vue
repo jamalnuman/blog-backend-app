@@ -40,6 +40,7 @@ export default {
       axios
         .post("/api/sessions", params)
         .then(response => {
+          //console.log(response)
         //this sets the default authorization header after logging in(after the response is returned)
           axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt; //Bearer XXXXXXXXXXXXXXXX
           localStorage.setItem("jwt", response.data.jwt); //localStorage is a hash..setItem lets you write to the hash and jwt will be the key in the hash and the value will be response.data.jwt

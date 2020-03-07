@@ -52,11 +52,12 @@ export default {
       axios
         .post("/api/users", params)
         .then(response => {
-          //console.log(response)
+          console.log(response)
           this.$router.push("/login");//then get redirected to the login page
         })
         .catch(error => {
           this.errors = error.response.data.errors;
+          //console.log(this.errors)
         }); //because there is no jwt created here, the jwt code for storage in main.js file doesnt apply here..it will apply to the login.vue component. 
     }
   }
