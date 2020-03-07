@@ -1,4 +1,4 @@
-<template>
+<template> <!-- an example page..can be deleted and will not effect the application -->
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
